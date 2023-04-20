@@ -195,13 +195,14 @@ By @{} """
 
 <b>
 ╭─────── • ◆ • ───────╮
-🔅 Dᴀʀᴋ Mᴏᴅᴇ :  <a href="https://t.me/addtheme/DQ_The_File_Donor_Theme">Tᴏᴜᴄʜ</a>
+🌀 𝑶𝒄𝒆𝒂𝒏 𝑪𝒓𝒆𝒘 𝑴𝒐𝒗𝒊𝒆𝒔 :  <a href="https://t.me/OceanCrew_Movies">Tᴏᴜᴄʜ</a>
 ╰─────── • ◆ • ───────╯
 
-=========== • ✠ • ===========
-▫️ ᴄʜᴀɴɴᴇʟ : @DQ_The_File_Donor_Updates
-▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ : @DQ_The_File_Donor_Support
-=========== • ✠ • ===========</b>"""
+
+
+🔰𝙅𝙊𝙄𝙉✯𝙎𝙃𝘼𝙍𝙀✯𝙎𝙐𝙋𝙋𝙊𝙍𝙏🔰
+           ⚕️
+</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
