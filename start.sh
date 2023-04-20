@@ -1,10 +1,10 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/DHANANJAY4532/v4_overpower.git /v4_overpower
+  git clone https://github.com/Arshad-ek2/Dq-auto-ar-bot.git /Dq-auto-ar-bot
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /v4_overpower
+  git clone $UPSTREAM_REPO /Dq-auto-ar-bot
 fi
 cd /DQ-The-File-Donor
 pip3 install -U -r requirements.txt
