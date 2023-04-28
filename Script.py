@@ -1,5 +1,7 @@
 class script(object):
-    START_TXT = """👋 ʜᴇʏ,{}\n ɪ'ᴍ ᴀᴅᴍɪɴ ᴏғ ᴍᴀʟᴀʏᴀʟɪ ғʀᴇᴀᴋs. ɪᴍ ᴀ ᴀᴜᴛᴏ ғɪʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ sᴍᴀʟʟ ғᴇᴀᴛᴜʀᴇs. ʙᴜᴛ ᴛʜɪs ʙᴏᴛ ɪs ʙᴜɪʟᴛ ᴏɴʟʏ ғᴏʀ ᴍʏ ᴀᴅᴍɪɴs.."""
+    START_TXT = """<b>Hᴇʟʟᴏ {},
+
+Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, You can't use me bro, I was only made for <a href='https://t.me/OceanCrew_Movies'>Ocean Crew Movies</a> 😍</b>"""
 
     HELP_TXT = """👋ʜɪ,{} \n ᴛʜᴇsᴇ ᴀʀᴇ ᴍʏ ʜᴇʟᴘ ғᴇᴀᴛᴜʀᴇs.."""
 
