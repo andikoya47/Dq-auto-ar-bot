@@ -5,7 +5,7 @@ Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, You can't use me bro, I was on
     HELP_TXT = """👋ʜɪ,{} \n ᴛʜᴇsᴇ ᴀʀᴇ ᴍʏ ʜᴇʟᴘ ғᴇᴀᴛᴜʀᴇs.."""
 
     ABOUT_TXT = """<b>✯ Mʏ Nᴀᴍᴇ: {}
-✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/DQ_The_File_Donor_Updates'>Jᴏᴇʟ Kᴜʀɪᴀɴ Bɪᴊ
+✯ Date Of Birth: 29/4/2023
 ✯ Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
 ✯ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
 ✯ DᴀᴛᴀBᴀsᴇ: <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>
