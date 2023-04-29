@@ -919,11 +919,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton("𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼", url="https://t.me/+MIOa3hp24PwyNzZl")
+                    InlineKeyboardButton("📽️𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼🎥", url="https://t.me/OceanCrew_Movies")
                 ],[                       
-                    InlineKeyboardButton("𝙈𝙁 𝙁𝙄𝙇𝙈 𝙐𝙋𝘿𝘼𝙏𝙀𝙎", url="https://t.me/+dqquafhU0ig5YzFl")
+                    InlineKeyboardButton("💞 M͜͡U͜͡S͜͡I͜͡C͜͡  C͜͡H͜͡A͜͡N͜͡N͜͡E͜͡L͜͡ 💞", url="https://t.me/fevo_music")
                 ],[ 
-                    InlineKeyboardButton(" 𝘼𝘽𝙊𝙐𝙏 ", callback_data="about"), 
+                    InlineKeyboardButton(" 😻𝘼𝘽𝙊𝙐𝙏 𝑴𝑬😸 ", callback_data="about"), 
                     InlineKeyboardButton("𝙃𝙀𝙇𝙋", callback_data="help")
                   ]]
         
