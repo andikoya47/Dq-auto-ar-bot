@@ -163,7 +163,7 @@ async def start(client, message):
                          ]         
                         ]          
                     )   
-       
+                )
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
