@@ -139,15 +139,15 @@ async def start(client, message):
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
-                    protect_content=msg.get('protect', False )
-
-
-
-
-
-
-
-
+                    protect_content=msg.get('protect', False),
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                         [
+                          InlineKeyboardButton('UPDATES CHANNEL', url=GRP_LNK)
+                         ]
+                        ]
+                    )
+                )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
@@ -155,14 +155,14 @@ async def start(client, message):
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
-                    protect_content=msg.get('protect', False )
-                    
- 
-      
-
-      
-       
-     
+                    protect_content=msg.get('protect', False),
+                    reply_markup-InlinekeyboardMarkup(
+                        [       
+                         [          
+                          InlineKeyboardButton('UPDATES CHANNEL', url=GRP_LNK)
+                         ]         
+                        ]          
+                    )   
        
             except Exception as e:
                 logger.warning(e, exc_info=True)
