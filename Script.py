@@ -211,7 +211,7 @@ By @{} """
 
 </b>"""
 
-     BFLCAP="""
+     BATCH_FILE_CAPTION="""
 <b>📂</b> <code>{file_caption}</code>
 <b>
 
