@@ -1596,9 +1596,7 @@ async def auto_filter(client, msg, spoll=False):
         InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{message.from_user.id}")
     ])
 
-    btn.insert(0, [
-        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
-    ])
+    
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
