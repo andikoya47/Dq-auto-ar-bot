@@ -196,7 +196,7 @@ By @{} """
 𝗠𝘀𝗴 <b>: {}</b>"""
 
     CAPTION = """
-<b>{file_name}</b>
+{file_name}
 <b>
 <b>𝚜𝚒𝚣𝚎••</b> <code>{file_size}</code>
 <b>
