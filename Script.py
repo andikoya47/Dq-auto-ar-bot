@@ -1,6 +1,6 @@
 class script(object):
     START_TXT = """<b>Hᴇʟʟᴏ {},
-Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, You can't use me bro, I was only made for <a href='https://t.me/OceanCrew_Movies'>Ocean Crew Movies</a> 😍</b>"""
+Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, You can't use me bro, I was only made for <a href='https://t.me/OceanCrewMovies'>Ocean Crew Movies</a> 😍</b>"""
 
     HELP_TXT = """👋ʜɪ,{} \n ᴛʜᴇsᴇ ᴀʀᴇ ᴍʏ ʜᴇʟᴘ ғᴇᴀᴛᴜʀᴇs.."""
 
@@ -203,7 +203,7 @@ By @{} """
 
 ╔═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
 
-💥 𝙅𝙊𝙄𝙉 :- @OceanCrew_Movies
+💥 𝙅𝙊𝙄𝙉 :- @OceanCrewMovies
 
 💥 𝙅𝙊𝙄𝙉 :- @fevo_music
 
