@@ -223,14 +223,19 @@ By @{} """
 
 
     IMDB_TEMPLATE_TXT = """
-<b>Query: {query}
-IMDb Data:
+🎬 <b>Title : {title}</b>
+🎭 <b>Genres : {genres}</b>
 
-🏷 Title: <a href={url}>{title}</a>
-🎭 Genres: {genres}
-📆 Year: <a href={url}/releaseinfo>{year}</a>
-🌟 Rating: <a href={url}/ratings>{rating}</a> / 10
-           ˢᵉˡᵉᶜᵗ ʸᵒᵘʳ ᵐᵒᵛⁱᵉ ⁿᵃᵐᵉ ᵃⁿᵈ ˢⁱᶻᵉ ☟</b>"""
+📆 <b>Year : {year}</b>
+🌟 <b>Rating :  {rating}/10</b>
+🀄 <b>Languages : {languages}</b> 
+🕒 <b>RunTime : {runtime}</b> 
+
+<b>⚡Request by⚡ : </b> <a href='tg://user?id={from_user.id}'><b>{}</b></a>\n
+
+𝙎𝙀𝙇𝙀𝘾𝙏 𝙔𝙊𝙐𝙍 𝙁𝙄𝙇𝙀  👇
+
+(𝑻𝒊𝒑 :Click Languag Button And Choose Your Languages)"""
     
     ALL_FILTERS = """
 <b>Hᴇʏ {}, Tʜᴇsᴇ ᴀʀᴇ ᴍʏ ᴛʜʀᴇᴇ ᴛʏᴘᴇs ᴏғ ғɪʟᴛᴇʀs.</b>"""
