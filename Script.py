@@ -227,8 +227,10 @@ By @{} """
 🎭 Genres: {genres}
 📆 Year: <a href={url}/releaseinfo>{year}</a>
 🌟 Rating: <a href={url}/ratings>{rating}</a> / 10</b>
+<b>🔊 Languages : {languages}</b>
+<b>📀 RunTime : {runtime} Minutes</b>
 
-(𝑻𝒊𝒑 :Click Languag Button And Choose Your Languages)
+(𝑻𝒊𝒑 :<b>Click Languag Button And Choose Your Languages</b>)
 
 𝙎𝙀𝙇𝙀𝘾𝙏 𝙔𝙊𝙐𝙍 𝙁𝙄𝙇𝙀  👇"""
 
