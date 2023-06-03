@@ -226,7 +226,14 @@ By @{} """
 🏷 Title: <a href={url}>{title}</a>
 🎭 Genres: {genres}
 📆 Year: <a href={url}/releaseinfo>{year}</a>
-🌟 Rating: <a href={url}/ratings>{rating}</a> / 10</b>""" 
+🌟 Rating: <a href={url}/ratings>{rating}</a> / 10</b>
+
+(𝑻𝒊𝒑 :Click Languag Button And Choose Your Languages)
+
+𝙎𝙀𝙇𝙀𝘾𝙏 𝙔𝙊𝙐𝙍 𝙁𝙄𝙇𝙀  👇"""
+
+
+ 
 
 
     
