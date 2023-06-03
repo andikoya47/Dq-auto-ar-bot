@@ -228,8 +228,8 @@ By @{} """
 
 📆 <b>Year : {year}</b>
 🌟 <b>Rating :  {rating}/10</b>
-🀄 <b>Languages : {languages}</b> 
-🕒 <b>RunTime : {runtime}</b> 
+🔊 <b>Languages : {languages}</b> 
+📀 <b>RunTime : {runtime}</b> 
 
 <b>⚡Request by⚡ : </b> <a href='tg://user?id={from_user.id}'><b>{}</b></a>\n
 
