@@ -223,10 +223,10 @@ By @{} """
 
 
     IMDB_TEMPLATE_TXT = """
-🏷 Title: <a href={url}>{title}</a>
-🎭 Genres: <b>{genres}</b>
-📆 Year: <a href={url}/releaseinfo>{year}</b>
-🌟 Rating: <b> <a href={url}/ratings>{rating}</a> / 10</b>
+🏷 <b>Title: <a href={url}>{title}</a> </b>
+🎭 <b>Genres: {genres}</b>
+📆 <b>Year: <a href={url}/releaseinfo>{year}</b>
+🌟 <b>Rating: <a href={url}/ratings>{rating}</a> / 10</b>
 <b>🔊 Languages : {languages}</b>
 <b>📀 RunTime : {runtime} Minutes</b>
 
