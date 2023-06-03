@@ -231,11 +231,7 @@ By @{} """
 🔊 <b>Languages : {languages}</b> 
 📀 <b>RunTime : {runtime}</b> 
 
-<b>⚡Request by⚡ : </b> <a href='tg://user?id={from_user.id}'><b>{}</b></a>\n
-
-𝙎𝙀𝙇𝙀𝘾𝙏 𝙔𝙊𝙐𝙍 𝙁𝙄𝙇𝙀  👇
-
-(𝑻𝒊𝒑 :Click Languag Button And Choose Your Languages)"""
+<b>⚡Request by⚡ : </b> <a href='tg://user?id={from_user.id}'><b>{}</b></a>\n"""
     
     ALL_FILTERS = """
 <b>Hᴇʏ {}, Tʜᴇsᴇ ᴀʀᴇ ᴍʏ ᴛʜʀᴇᴇ ᴛʏᴘᴇs ᴏғ ғɪʟᴛᴇʀs.</b>"""
