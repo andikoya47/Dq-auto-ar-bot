@@ -22,7 +22,7 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                    InlineKeyboardButton("📽️𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼🎥", url="https://t.me/OceanCrew_Movies")
+                    InlineKeyboardButton("📽️𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼🎥", url="https://t.me/OceanCrewMovies")
                 ],[                       
                     InlineKeyboardButton("💞 M͜͡U͜͡S͜͡I͜͡C͜͡  C͜͡H͜͡A͜͡N͜͡N͜͡E͜͡L͜͡ 💞", url="https://t.me/fevo_music")
                 ],[ 
@@ -42,7 +42,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton("📽️𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼🎥", url="https://t.me/OceanCrew_Movies")
+                    InlineKeyboardButton("📽️𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼🎥", url="https://t.me/OceanCrewMovies")
                 ],[                       
                     InlineKeyboardButton("💞 M͜͡U͜͡S͜͡I͜͡C͜͡  C͜͡H͜͡A͜͡N͜͡N͜͡E͜͡L͜͡ 💞", url="https://t.me/fevo_music")
                 ],[ 
@@ -87,7 +87,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton("📽️𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼🎥", url="https://t.me/OceanCrew_Movies")
+                    InlineKeyboardButton("📽️𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼🎥", url="https://t.me/OceanCrewMovies")
                 ],[                       
                     InlineKeyboardButton("💞 M͜͡U͜͡S͜͡I͜͡C͜͡  C͜͡H͜͡A͜͡N͜͡N͜͡E͜͡L͜͡ 💞", url="https://t.me/fevo_music")
                 ],[ 
@@ -264,13 +264,7 @@ async def start(client, message):
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                     [
-                      InlineKeyboardButton('UPDATES CHANNEL', url=GRP_LNK)
-                     ]
-                    ]
-                )
+                
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
@@ -314,13 +308,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
-        reply_markup=InlineKeyboardMarkup(
-            [
-             [
-              InlineKeyboardButton('UPDATES CHANNEL', url=GRP_LNK)
-             ]
-            ]
-        )
+        
     )
                     
 
