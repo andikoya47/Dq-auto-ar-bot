@@ -24,10 +24,10 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton("📽️𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼🎥", url="https://t.me/OceanCrewMovies")
                 ],[                       
-                    InlineKeyboardButton("💞 M͜͡U͜͡S͜͡I͜͡C͜͡  C͜͡H͜͡A͜͡N͜͡N͜͡E͜͡L͜͡ 💞", url="https://t.me/fevo_music")
+                    InlineKeyboardButton("📜𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐌𝐎𝐕𝐈𝐄𝐒📜", url="https://graph.org/HOW-TO-DOWNLOAD-MOVIES-AND-SERIES-06-14")
                 ],[ 
                     InlineKeyboardButton(" 😻𝘼𝘽𝙊𝙐𝙏 𝑴𝑬😸", callback_data="about"), 
-                    InlineKeyboardButton("𝙃𝙀𝙇𝙋", callback_data="help")
+                    InlineKeyboardButton("🛠️𝐀̶̶𝐃̶𝐌̶𝐈̶𝐍̶ 𝐎̶𝐍̶𝐋̶𝐘̶🛠️", callback_data="help")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
@@ -44,10 +44,10 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton("📽️𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼🎥", url="https://t.me/OceanCrewMovies")
                 ],[                       
-                    InlineKeyboardButton("💞 M͜͡U͜͡S͜͡I͜͡C͜͡  C͜͡H͜͡A͜͡N͜͡N͜͡E͜͡L͜͡ 💞", url="https://t.me/fevo_music")
+                    InlineKeyboardButton("📜𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐌𝐎𝐕𝐈𝐄𝐒📜", url="https://graph.org/HOW-TO-DOWNLOAD-MOVIES-AND-SERIES-06-14")
                 ],[ 
                     InlineKeyboardButton(" 😻𝘼𝘽𝙊𝙐𝙏 𝑴𝑬😸 ", callback_data="about"), 
-                    InlineKeyboardButton("𝙃𝙀𝙇𝙋", callback_data="help")
+                    InlineKeyboardButton("🛠️𝐀̶̶𝐃̶𝐌̶𝐈̶𝐍̶ 𝐎̶𝐍̶𝐋̶𝐘̶🛠️", callback_data="help")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -89,10 +89,10 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton("📽️𝙈𝙊𝙑𝙄𝙀 𝙍𝙀𝙌𝙐𝙀𝙎𝙏 𝘼𝙍𝙀𝘼🎥", url="https://t.me/OceanCrewMovies")
                 ],[                       
-                    InlineKeyboardButton("💞 M͜͡U͜͡S͜͡I͜͡C͜͡  C͜͡H͜͡A͜͡N͜͡N͜͡E͜͡L͜͡ 💞", url="https://t.me/fevo_music")
+                    InlineKeyboardButton("📜𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐌𝐎𝐕𝐈𝐄𝐒📜", url="https://graph.org/HOW-TO-DOWNLOAD-MOVIES-AND-SERIES-06-14")
                 ],[ 
                     InlineKeyboardButton(" 😻𝘼𝘽𝙊𝙐𝙏 𝑴𝑬😸 ", callback_data="about"), 
-                    InlineKeyboardButton("𝙃𝙀𝙇𝙋", callback_data="help")
+                    InlineKeyboardButton("🛠️A̶̶D̶M̶I̶N̶ O̶N̶L̶Y̶🛠️", callback_data="help")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
