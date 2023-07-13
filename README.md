@@ -142,7 +142,7 @@
 
 <details><summary>Deploy To Render</summary>
 <br>
-<a href="https://render.com/deploy?repo=https://github.com/Arshad-ek2/Dq-auto-ar-bot/tree/web">
+<a href="https://github.com/Arshad-ek2/Dq-auto-ar-bot">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
 </details>
