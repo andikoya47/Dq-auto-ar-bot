@@ -4,13 +4,13 @@ Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, You can't use me bro, I was on
 
     HELP_TXT = """👋ʜɪ,{} \n ᴛʜᴇsᴇ ᴀʀᴇ ᴍʏ ʜᴇʟᴘ ғᴇᴀᴛᴜʀᴇs.."""
 
-    ABOUT_TXT = """<b>✯ Mʏ Nᴀᴍᴇ: {}
-✯ Date Of Birth: 29/4/2023
-✯ Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
-✯ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
-✯ DᴀᴛᴀBᴀsᴇ: <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>
-✯ Bᴏᴛ Sᴇʀᴠᴇʀ: <a href='https://app.koyeb.com/'>Kᴏʏᴇʙ</a>
-✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: v2.7.1 [ Sᴛᴀʙʟᴇ ]</b>"""
+    ABOUT_TXT = """<b>
+🗓️ Date Of Birth: 29/4/2023
+📒 Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
+📕 Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
+🗄️ DᴀᴛᴀBᴀsᴇ: <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>
+📟 Bᴏᴛ Sᴇʀᴠᴇʀ: Reɴder 
+🔧 Dᴇᴠᴇʟᴏᴩᴇʀ & Aᴅɪᴍɴꜱ : <a href='https://t.me/Maddox_kozh'>ᴍᴀᴅᴅᴏx</a> & <a href='https://t.me/Haterxv'>ʜᴀᴛᴇʀ</a> </b>"""
     
     MANUELFILTER_TXT = """ʜᴇʟᴘ: <b>ꜰɪʟᴛᴇʀꜱ</b>
 - ꜰɪʟᴛᴇʀ ɪꜱ ᴀ ꜰᴇᴀᴛᴜʀᴇ ᴡᴇʀᴇ ᴜꜱᴇʀꜱ ᴄᴀɴ ꜱᴇᴛ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ʀᴇᴘʟɪᴇꜱ ꜰᴏʀ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴋᴇʏᴡᴏʀᴅ ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇꜱᴘᴏɴᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀ ᴋᴇʏᴡᴏʀᴅ ɪꜱ ꜰᴏᴜɴᴅ ɪɴ ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ
@@ -195,23 +195,13 @@ By @{} """
 
 𝗠𝘀𝗴 <b>: {}</b>"""
 
-    CAPTION = """
-<b>{file_name}</b>
-<b>
-<b>𝚜𝚒𝚣𝚎••</b> <code>{file_size}</code>
-<b>
+    CAPTION = """"
+{file_name} 
 
-╔═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
+ꜰɪʟᴇ ꜱɪᴢᴇ = {file_size}
 
-💥 𝙅𝙊𝙄𝙉 :- @OceanCrewMovies
-
-💥 𝙅𝙊𝙄𝙉 :- @fevo_music
-
-╚═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝
-
-🔰𝙅𝙊𝙄𝙉✯𝙎𝙃𝘼𝙍𝙀✯𝙎𝙐𝙋𝙋𝙊𝙍𝙏🔰
-
-</b>"""
+<b> 🪶 Mᴏᴠɪᴇ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ :- @Ocm_Movie_Updates </b>
+<b> 🪶 ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ :- @OceanCrewMovies </b>"""
 
      
 
