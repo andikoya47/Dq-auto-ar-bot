@@ -195,13 +195,13 @@ By @{} """
 
 𝗠𝘀𝗴 <b>: {}</b>"""
 
-    CAPTION = """"
+    CAPTION = """
 {file_name} 
 
 ꜰɪʟᴇ ꜱɪᴢᴇ = {file_size}
 
-<b> 🪶 Mᴏᴠɪᴇ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ :- @Ocm_Movie_Updates </b>
-<b> 🪶 ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ :- @OceanCrewMovies </b>"""
+<b> 🍃 Mᴏᴠɪᴇ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ :- @Ocm_Movie_Updates </b>
+<b> 🍁 ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ :- @OceanCrewMovies </b>"""
 
      
 
