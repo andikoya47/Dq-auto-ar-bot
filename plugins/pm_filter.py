@@ -77,7 +77,9 @@ async def pm_text(bot, message):
     )
 
 NOR_PIC = [
- "https://graph.org/file/dcd610468df80c9a66bc1.jpg"
+ "https://graph.org/file/dcd610468df80c9a66bc1.jpg",
+ "https://graph.org/file/c5a2a0192a43eed3d0608.jpg"
+]
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
