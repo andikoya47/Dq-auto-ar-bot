@@ -1168,19 +1168,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('Sᴛᴀᴛᴜs', callback_data='stats')
         ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
         if query.from_user.id in ADMINS:
-            user = await client.get_users(from_user)
-            reply_markup = InlineKeyboardMarkup(buttons)
-            await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
+            await query.message.edit_text(text=script.HELP_TXT, reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML)
         else:
             await query.answer("𝖠𝗋𝖾 𝗒𝗈𝗎 𝗂𝗇𝗌𝗂𝗇𝗎𝖺𝗍𝗂𝗇𝗀 𝖿𝗈𝗈𝗅𝗂𝗌𝗁𝗇𝖾𝗌𝗌...? 𝖸𝗈𝗎 𝖼𝖺𝗇𝗇𝗈𝗍 𝗎𝗍𝗂𝗅𝗂𝗓𝖾 𝗍𝗁𝗂𝗌 𝖿𝖾𝖺𝗍𝗎𝗋𝖾 𝖺𝗌 𝗂𝗍 𝗂𝗌 𝖾𝗑𝖼𝗅𝗎𝗌𝗂𝗏𝖾𝗅𝗒 𝗋𝖾𝗌𝖾𝗋𝗏𝖾𝖽 𝖿𝗈𝗋 𝖮𝖼𝖾𝖺𝗇𝖢𝗋𝖾𝗐 𝖬𝗈𝗏𝗂𝖾𝗌 𝖺𝖽𝗆𝗂𝗇𝗂𝗌𝗍𝗋𝖺𝗍𝗈𝗋𝗌 ❌")
     
