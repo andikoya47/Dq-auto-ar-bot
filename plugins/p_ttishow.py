@@ -291,9 +291,10 @@ async def list_chats(bot, message):
             outfile.write(out)
         await message.reply_document('chats.txt', caption="List Of Chats")
 
-@Client.on_message(filters.chat_added)
+@Client.on_message(filters.chat_type.groups & filters.new_chat_members)
 async def bye(client, message):
     try:
+        if message.new_chat_members[0].id == client.get_me().id:
         if message.chat.id not in ALW_GRP: 
             print(f"bye bye {message.chat.id}")
             await message.reply_text("you can't use this bot in your group its only for ocm")
