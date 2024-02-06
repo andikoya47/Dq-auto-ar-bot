@@ -295,10 +295,10 @@ async def list_chats(bot, message):
 async def bye(client, message):
     try:
         if message.new_chat_members[0].id == client.get_me().id:
-        if message.chat.id not in ALW_GRP: 
-            print(f"bye bye {message.chat.id}")
-            await message.reply_text("you can't use this bot in your group its only for ocm")
-            await client.leave_chat(message.chat.id) #by Maddox47
+            if message.chat.id not in ALW_GRP: 
+                print(f"bye bye {message.chat.id}")
+                await message.reply_text("you can't use this bot in your group its only for ocm")
+                await client.leave_chat(message.chat.id) #by Maddox47
     except Exception as e:
         print(f"Error : {e}")
 
