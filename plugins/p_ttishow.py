@@ -1,4 +1,4 @@
-from pyrogram import Client, filters, enums, Filters
+from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.enums import ChatType
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
@@ -292,7 +292,7 @@ async def list_chats(bot, message):
             outfile.write(out)
         await message.reply_document('chats.txt', caption="List Of Chats")
 
-@Client.on_message(Filters.chat(type=ChatType.GROUP) & Filters.new_chat_members)
+@Client.on_message(filters.chat(type=ChatType.GROUP) & filters.new_chat_members)
 async def bye(client, message):
     try:
         if message.new_chat_members[0].id == client.get_me().id:
