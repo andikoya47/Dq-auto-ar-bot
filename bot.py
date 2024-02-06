@@ -101,6 +101,10 @@ class Bot(Client):
                 yield message
                 current += 1
 
+pyrogram_version = pyrogram.__version__
+print("Pyrogram version:", pyrogram_version)
+
+
 
 app = Bot()
 app.run()
