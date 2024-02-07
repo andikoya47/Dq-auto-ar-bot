@@ -34,7 +34,7 @@ async def save_group(bot, message):
             except:
                 pass
             await bot.leave_chat(message.chat.id)
-         if message.chat.id not in ALW_GRP:
+        if message.chat.id not in ALW_GRP:
              try:
                  await message.reply_text("iam lefting..")
                  await bot.leave_chat(message.chat.id)
