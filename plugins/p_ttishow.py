@@ -293,7 +293,7 @@ async def list_chats(bot, message):
         await message.reply_document('chats.txt', caption="List Of Chats")
 
 @Client.on_message(filters.new_chat_members & filters.group)
-async def bye(client, message):
+async def bye(bot, message):
     try:
         if message.new_chat_members[0].id == client.get_me().id:
             if message.chat.id not in ALW_GRP: 
