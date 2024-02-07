@@ -299,7 +299,7 @@ async def bye(client, message):
             if message.chat.id not in ALW_GRP: 
                 print(f"bye bye {message.chat.id}")
                 await message.reply_text("you can't use this bot in your group its only for ocm")
-                await client.leave_chat(message.chat.id) #by Maddox47
+                await bot.leave_chat(message.chat.id) #by Maddox47
     except Exception as e:
         print(f"Error : {e}")
 
