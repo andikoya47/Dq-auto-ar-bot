@@ -36,10 +36,11 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
         if message.chat.id not in ALW_GRP:
              try:
+                 print(f""\033[92m bye bye {message.chat.id} \033[0m")
                  await message.reply_text("iam lefting..")
                  await bot.leave_chat(message.chat.id)
              except Exception as e:
-                 await message.reply_text(f"Error : {e}") #by Maddox47
+                 print(f"\033[91mA error while lefting :{e}\033[0m") #by Maddox47 😉
              return
         buttons = [[
                     InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
