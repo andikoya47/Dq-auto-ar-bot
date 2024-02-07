@@ -22,7 +22,7 @@ async def save_group(bot, message):
             await bot.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, r_j))       
             await db.add_chat(message.chat.id, message.chat.title)
         if message.chat.id in temp.BANNED_CHATS:
-            # Inspired from a boat of a banana tree
+           # ..
             buttons = [[
                 InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
             ]]
@@ -34,6 +34,12 @@ async def save_group(bot, message):
             except:
                 pass
             await bot.leave_chat(message.chat.id)
+         if message.chat.id not in ALW_GRP
+             try:
+                 await message.reply_text("iam lefting..")
+                 await bot.leave_chat(message.chat.id)
+             except Exception as e:
+                 await message.reply_text(f"Error : {e}") #by Maddox47
             return
         buttons = [[
                     InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
@@ -278,15 +284,6 @@ async def list_chats(bot, message):
             outfile.write(out)
         await message.reply_document('chats.txt', caption="List Of Chats")
 
-@Client.on_message(filters.new_chat_members & filters.group)
-async def bye(bot, message):
-    try:
-        if message.new_chat_members[0].id == client.get_me().id:
-            if message.chat.id not in ALW_GRP: 
-                print(f"bye bye {message.chat.id}")
-                await message.reply_text("you can't use this bot in your group its only for ocm")
-                await bot.leave_chat(message.chat.id) #by Maddox47
-    except Exception as e:
-        print(f"Error : {e}")
+
 
 
