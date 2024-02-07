@@ -97,10 +97,10 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 
     LOG_TEXT_G = """#NewGroup
 
-<b>᚛› 𝐆𝐫𝐨𝐮𝐩 ⪼ {title}</b>
-<b>᚛› 𝐆 𝐈𝐃 ⪼ {id}
+<b>᚛› 𝐆𝐫𝐨𝐮𝐩 ⪼ ocm</b>
+<b>᚛› 𝐆 𝐈𝐃 ⪼ @Oceancrewmovies
 <b>᚛› 𝐓𝐨𝐭𝐚𝐥 𝐌𝐞𝐦𝐛𝐞𝐫𝐬 ⪼ idk </b>
-<b>᚛› 𝐀𝐝𝐝𝐞𝐝 𝐁𝐲 ⪼ {mention}</b>
+<b>᚛› 𝐀𝐝𝐝𝐞𝐝 𝐁𝐲 ⪼ idk</b>
 
 
 
