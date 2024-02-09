@@ -45,6 +45,7 @@ async def save_group(bot, message):
                      reply_markup=leave_btn
                      )
                  await bot.leave_chat(message.chat.id)
+                 awiat bot.send message(LOG_CHANNEL, text="#Leaved\n A user tri
              except Exception as e:
                  print(f"\033[91mA error while lefting :{e}\033[0m") #by Maddox47 😉
              return
