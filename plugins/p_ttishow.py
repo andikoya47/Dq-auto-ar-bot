@@ -35,9 +35,15 @@ async def save_group(bot, message):
                 pass
             await bot.leave_chat(message.chat.id)
         if message.chat.id not in ALW_GRP:
+             leave_btn = [[
+                 InlineKeyboardButton("𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲", url="https://t.me/OceanCrewMovies")
+             ]]
              try:
                  print(f""\033[92m bye bye {message.chat.id} \033[0m")
-                 await message.reply_text("iam lefting..")
+                 await message.reply_text(
+                     text=script.LEAVE_TEXT
+                     reply_markup=leave_btn
+                     )
                  await bot.leave_chat(message.chat.id)
              except Exception as e:
                  print(f"\033[91mA error while lefting :{e}\033[0m") #by Maddox47 😉
