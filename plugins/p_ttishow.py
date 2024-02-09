@@ -40,7 +40,7 @@ async def save_group(bot, message):
              ]]
              title=message.chat.title
              try:
-                 print(f""\033[92m bye bye {message.chat.id} \033[0m")
+                 print(f"\033[92m bye bye {message.chat.id} \033[0m")
                  await message.reply_text(
                      text=("I'ᴍ ᴇxᴄʟᴜsɪᴠᴇʟʏ ᴅᴇsɪɢɴᴇᴅ ғᴏʀ OCEANCREW MOVIES Gʀᴏᴜᴘ ᴀɴᴅ ᴄᴀɴɴᴏᴛ ᴘᴀʀᴛɪᴄɪᴘᴀᴛᴇ ɪɴ ᴏᴛʜᴇʀ ɢʀᴏᴜᴘs. Fᴏʀ Mᴏᴠɪᴇs, ᴘʟᴇᴀsᴇ ᴜsᴇ ᴛʜᴇ OCEANCREW MOVIES ɢʀᴏᴜᴘ. Aᴄᴄᴇss ᴛʜᴇ Gʀᴏᴜᴘ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ✨")
                      reply_markup=leave_btn
