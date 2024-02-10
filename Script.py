@@ -96,23 +96,17 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 <b>᚛› 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝙱</b>"""
 
     LOG_TEXT_G = """#NewGroup
-
 <b>᚛› 𝐆𝐫𝐨𝐮𝐩 ⪼ ocm</b>
 <b>᚛› 𝐆 𝐈𝐃 ⪼ @Oceancrewmovies
 <b>᚛› 𝐓𝐨𝐭𝐚𝐥 𝐌𝐞𝐦𝐛𝐞𝐫𝐬 ⪼ idk </b>
 <b>᚛› 𝐀𝐝𝐝𝐞𝐝 𝐁𝐲 ⪼ idk</b>
-
-
-
 """
-    LOG_TEXT_P = """#NewUser
     
+    LOG_TEXT_P = """#NewUser
 <b>᚛› 𝐈𝐃 - <code>{}</code></b>
 <b>᚛› 𝐍𝐚𝐦𝐞 - {}</b>
 <b>᚛› 𝐔𝐍 - {message.from_user.mention}</b>
-
 By @{} """
-
 
     ALRT_TXT = """ʜᴇʟʟᴏ {},
 ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,
@@ -173,6 +167,11 @@ By @{} """
 
 🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)"""
 
+    LEAVE_TXT = """
+I'ᴍ ᴇxᴄʟᴜsɪᴠᴇʟʏ ᴅᴇsɪɢɴᴇᴅ ғᴏʀ OCEANCREW MOVIES Gʀᴏᴜᴘ ᴀɴᴅ ᴄᴀɴɴᴏᴛ ᴘᴀʀᴛɪᴄɪᴘᴀᴛᴇ ɪɴ ᴏᴛʜᴇʀ ɢʀᴏᴜᴘs. 
+Fᴏʀ Mᴏᴠɪᴇs, ᴘʟᴇᴀsᴇ ᴜsᴇ ᴛʜᴇ OCEANCREW MOVIES ɢʀᴏᴜᴘ. 
+Aᴄᴄᴇss ᴛʜᴇ Gʀᴏᴜᴘ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ✨
+
     SINFO = """
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
 ꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ
@@ -203,15 +202,6 @@ By @{} """
 <b> 🍃 Mᴏᴠɪᴇ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ :- @Ocm_Movie_Updates </b>
 <b> 🍁 ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ :- @OceanCrewMovies </b>"""
 
-     
-
-
-
-
- 
-            
-
-
     IMDB_TEMPLATE_TXT = """
 🏷 <b>Title: <a href={url}>{title}</a> </b>
 🎭 <b>Genres: {genres}</b>
@@ -224,11 +214,6 @@ By @{} """
 
 𝙎𝙀𝙇𝙀𝘾𝙏 𝙔𝙊𝙐𝙍 𝙁𝙄𝙇𝙀  👇"""
 
-
- 
-
-
-    
     ALL_FILTERS = """
 <b>Hᴇʏ {}, Tʜᴇsᴇ ᴀʀᴇ ᴍʏ ᴛʜʀᴇᴇ ᴛʏᴘᴇs ᴏғ ғɪʟᴛᴇʀs.</b>"""
     
