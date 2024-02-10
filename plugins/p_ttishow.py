@@ -42,7 +42,7 @@ async def save_group(bot, message):
              try:
                  print(f"\033[92m bye bye {message.chat.id} \033[0m")
                  await message.reply_text(
-                     text=script.LEAVE_TXT
+                     text=(script.LEAVE_TXT),
                      reply_markup=leave_btn
                      )
                  awiat bot.send message(LOG_CHANNEL, text=(f"#Leaved\n✮Group name :{title}\n✮Group username :{message.chat.username}\n✮Group id :{message.chat.id}\n✮Total members:{total}\n✮user :{r_j}")
