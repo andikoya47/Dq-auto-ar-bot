@@ -39,13 +39,16 @@ async def save_group(bot, message):
                  InlineKeyboardButton("🚦𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲🚦", url="https://t.me/OceanCrewMovies")
              ]]
              title=message.chat.title
+             tmembers=await bot.get_chat_members_count(message.chat.id)
+             gusername=message.chat.username
+             gid=message.chat.id
              try:
                  print(f"\033[92m bye bye {message.chat.id} \033[0m")
                  await message.reply_text(
                      text=(script.LEAVE_TXT),
                      reply_markup=leave_btn
                      )
-                 #await bot.send_message(chat_id=LOG_CHANNEL, text=(f"#Leaved\n✮Group name :{title}\n✮Group username :{message.chat.username}\n✮Group id :{message.chat.id}\n✮Total members:{total}\n✮user :{r_j}"))
+                 await bot.send_message(chat_id=LOG_CHANNEL, text=script.LEAVE_LOG.format(title, gusername, gid, tmembers))
                  await bot.leave_chat(message.chat.id)
              except Exception as e:
                  print(f"\033[91mA error while lefting :{e}\033[0m") #by Maddox47 😉
