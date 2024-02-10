@@ -45,7 +45,7 @@ async def save_group(bot, message):
                      text=(script.LEAVE_TXT),
                      reply_markup=leave_btn
                      )
-                 awiat bot.send message(LOG_CHANNEL, text=(f"#Leaved\n✮Group name :{title}\n✮Group username :{message.chat.username}\n✮Group id :{message.chat.id}\n✮Total members:{total}\n✮user :{r_j}"))
+                 await bot.send message(LOG_CHANNEL, text=(f"#Leaved\n✮Group name :{title}\n✮Group username :{message.chat.username}\n✮Group id :{message.chat.id}\n✮Total members:{total}\n✮user :{r_j}"))
                  await bot.leave_chat(message.chat.id)
              except Exception as e:
                  print(f"\033[91mA error while lefting :{e}\033[0m") #by Maddox47 😉
