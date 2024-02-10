@@ -42,11 +42,11 @@ async def save_group(bot, message):
              try:
                  print(f"\033[92m bye bye {message.chat.id} \033[0m")
                  await message.reply_text(
-                     text=("I'ᴍ ᴇxᴄʟᴜsɪᴠᴇʟʏ ᴅᴇsɪɢɴᴇᴅ ғᴏʀ OCEANCREW MOVIES Gʀᴏᴜᴘ ᴀɴᴅ ᴄᴀɴɴᴏᴛ ᴘᴀʀᴛɪᴄɪᴘᴀᴛᴇ ɪɴ ᴏᴛʜᴇʀ ɢʀᴏᴜᴘs. Fᴏʀ Mᴏᴠɪᴇs, ᴘʟᴇᴀsᴇ ᴜsᴇ ᴛʜᴇ OCEANCREW MOVIES ɢʀᴏᴜᴘ. Aᴄᴄᴇss ᴛʜᴇ Gʀᴏᴜᴘ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ✨")
+                     text=script.LEAVE_TXT
                      reply_markup=leave_btn
                      )
-                 await bot.leave_chat(message.chat.id)
                  awiat bot.send message(LOG_CHANNEL, text=(f"#Leaved\n✮Group name :{title}\n✮Group username :{message.chat.username}\n✮Group id :{message.chat.id}\n✮Total members:{total}\n✮user :{r_j}")
+                 await bot.leave_chat(message.chat.id)
              except Exception as e:
                  print(f"\033[91mA error while lefting :{e}\033[0m") #by Maddox47 😉
              return
