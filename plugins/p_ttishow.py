@@ -42,13 +42,14 @@ async def save_group(bot, message):
              tmembers=await bot.get_chat_members_count(message.chat.id)
              gusername=message.chat.username
              gid=message.chat.id
+             added=message.from_user.mention if message.from_user else "Anonymous" 
              try:
                  print(f"\033[92m bye bye {message.chat.id} \033[0m")
                  await message.reply_text(
                      text=(script.LEAVE_TXT),
                      reply_markup=InlineKeyboardMarkup(leave_btn)
                  )
-                 await bot.send_message(chat_id=LOG_CHANNEL, text=script.LEAVE_LOG.format(title, gusername, gid, tmembers))
+                 await bot.send_message(chat_id=LOG_CHANNEL, text=script.LEAVE_LOG.format(title, gusername, gid, tmembers, added))
                  await bot.leave_chat(message.chat.id)
              except Exception as e:
                  print(f"\033[91mA error while lefting :{e}\033[0m") #by Maddox47 😉
