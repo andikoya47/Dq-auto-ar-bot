@@ -814,4 +814,10 @@ async def getout(client, message):
         if dialog.is_group and dialog.chat.id != ALW_GRP:
             try:
                 await client.send_message(dialog.chat.id, text="""<code>Mʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ ʜᴀs ᴀᴅᴠɪsᴇᴅ ᴍᴇ ᴛᴏ ᴅɪsᴄᴏɴᴛɪɴᴜᴇ ᴍʏ ᴘʀᴇsᴇɴᴄᴇ ʜᴇʀᴇ, ᴀs I ᴀᴍ ᴇxᴄʟᴜsɪᴠᴇʟʏ ᴅᴇsɪɢɴᴇᴅ ғᴏʀ OᴄᴇᴀɴCʀᴇᴡ Mᴏᴠɪᴇs\nYᴏᴜ ᴄᴀɴ ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴏᴠɪᴇs ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ....💗</code>""", reply_markup=InlinekeyboardMarkup(btn))
-                
+                await client.leave_chat(dialog.chat.id)
+                grp_list.append(dialog.chat.title, dialog.chat.username)
+            expect Expection as e:
+                await message.reply_text(f"Error while lefting from @{dialog.chat.username} :{e}")
+    if grp_list:
+        await message.reply_text("
+   
