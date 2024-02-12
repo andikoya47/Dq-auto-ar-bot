@@ -819,6 +819,10 @@ async def getout(client, message):
             expect Expection as e:
                 await message.reply_text(f"Error while lefting from @{dialog.chat.username} :{e}")
     if grp_list:
-        reply="Le
-        reply+="\n".join([f"•<a href='tg://join?invite={info[1]}'>{info[0]}</a>" for info in grp_list])
+        reply="<b>Leaved from all of this groups:</b>\n"
+        reply+="\n".join([f"✮<a href='tg://join?invite={info[1]}'>{info[0]}</a>" for info in grp_list])
+    else
+        reply="No one me added to there Group 🥺"
+    await message.reply_text(reply, parse_mode=html)
+        
    
