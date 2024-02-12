@@ -46,8 +46,8 @@ async def save_group(bot, message):
                  print(f"\033[92m bye bye {message.chat.id} \033[0m")
                  await message.reply_text(
                      text=(script.LEAVE_TXT),
-                     reply_markup=leave_btn
-                     )
+                     reply_markup=InlineKeyboardMarkup(leave_btn)
+                 )
                  await bot.send_message(chat_id=LOG_CHANNEL, text=script.LEAVE_LOG.format(title, gusername, gid, tmembers))
                  await bot.leave_chat(message.chat.id)
              except Exception as e:
