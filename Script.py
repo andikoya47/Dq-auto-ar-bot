@@ -170,14 +170,14 @@ By @{} """
     LEAVE_TXT = """
 I'ᴍ ᴇxᴄʟᴜsɪᴠᴇʟʏ ᴅᴇsɪɢɴᴇᴅ ғᴏʀ OCEANCREW MOVIES Gʀᴏᴜᴘ ᴀɴᴅ ᴄᴀɴɴᴏᴛ ᴘᴀʀᴛɪᴄɪᴘᴀᴛᴇ ɪɴ ᴏᴛʜᴇʀ ɢʀᴏᴜᴘs. 
 Fᴏʀ Mᴏᴠɪᴇs, ᴘʟᴇᴀsᴇ ᴜsᴇ ᴛʜᴇ OCEANCREW MOVIES ɢʀᴏᴜᴘ. 
-Aᴄᴄᴇss ᴛʜᴇ Gʀᴏᴜᴘ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ✨"""
+Aᴄᴄᴇss ᴛʜᴇ Gʀᴏᴜᴘ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ✨..."""
 
     LEAVE_LOG = """
-#Leaved
-✮Group name :{}
-✮Group username :{}
-✮Group id :{}
-✮Total members:{}"""
+<b>#Leaved</b>
+<b>✮ Group name : <a href=https://t.me/{}>{}</a> </b>
+<b>✮ Group id : <code>{}</code></b>
+<b>✮ Total members: <code>{}</code></b>
+<b>✮ Added By : {}</b>"""
 
     SINFO = """
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
