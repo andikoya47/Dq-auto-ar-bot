@@ -821,8 +821,8 @@ async def getout(client, message):
     if grp_list:
         reply="<b>Leaved from all of this groups:</b>\n"
         reply+="\n".join([f"✲<a href='tg://join?invite={info[1]}'>{info[0]}</a>" for info in grp_list])
-    else
+    else:
         reply="No one me added to there Group 🥺"
-    await message.reply_text(reply, parse_mode="html")
+    await message.reply_text(reply, parse_mode="html") #by Maddox47
         
    
