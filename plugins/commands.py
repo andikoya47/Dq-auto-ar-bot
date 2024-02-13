@@ -816,13 +816,13 @@ async def getout(client, message):
                 await client.send_message(dialog.chat.id, text="""<code>Mʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ ʜᴀs ᴀᴅᴠɪsᴇᴅ ᴍᴇ ᴛᴏ ᴅɪsᴄᴏɴᴛɪɴᴜᴇ ᴍʏ ᴘʀᴇsᴇɴᴄᴇ ʜᴇʀᴇ, ᴀs I ᴀᴍ ᴇxᴄʟᴜsɪᴠᴇʟʏ ᴅᴇsɪɢɴᴇᴅ ғᴏʀ OᴄᴇᴀɴCʀᴇᴡ Mᴏᴠɪᴇs\nYᴏᴜ ᴄᴀɴ ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴏᴠɪᴇs ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ....💗</code>""", reply_markup=InlinekeyboardMarkup(btn))
                 await client.leave_chat(dialog.chat.id)
                 grp_list.append((dialog.chat.title, dialog.chat.username))
-            expect Expection as e:
+            except Exception as e:
                 await message.reply_text(f"Error while lefting from @{dialog.chat.username} :{e}")
     if grp_list:
         reply="<b>Leaved from all of this groups:</b>\n"
-        reply+="\n".join([f"✮<a href='tg://join?invite={info[1]}'>{info[0]}</a>" for info in grp_list])
+        reply+="\n".join([f"✲<a href='tg://join?invite={info[1]}'>{info[0]}</a>" for info in grp_list])
     else
         reply="No one me added to there Group 🥺"
-    await message.reply_text(reply, parse_mode=html)
+    await message.reply_text(reply, parse_mode="html")
         
    
