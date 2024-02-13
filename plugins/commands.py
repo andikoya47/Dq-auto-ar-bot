@@ -809,8 +809,7 @@ async def getout(client, message):
     btn = [[
         InlineKeyboardButton("✨𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲✨", url="https://t.me/OceanCrewMovies")
     ]]
-    dialogs = await client.get_dialogs()
-    for dialog in dialogs:
+    async for dialog in client.iter_dialogs():
         if dialog.is_group and dialog.chat.id != ALW_GRP:
             try:
                 await client.send_message(dialog.chat.id, text="""<code>Mʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ ʜᴀs ᴀᴅᴠɪsᴇᴅ ᴍᴇ ᴛᴏ ᴅɪsᴄᴏɴᴛɪɴᴜᴇ ᴍʏ ᴘʀᴇsᴇɴᴄᴇ ʜᴇʀᴇ, ᴀs I ᴀᴍ ᴇxᴄʟᴜsɪᴠᴇʟʏ ᴅᴇsɪɢɴᴇᴅ ғᴏʀ OᴄᴇᴀɴCʀᴇᴡ Mᴏᴠɪᴇs\nYᴏᴜ ᴄᴀɴ ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴏᴠɪᴇs ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ....💗</code>""", reply_markup=InlinekeyboardMarkup(btn))
