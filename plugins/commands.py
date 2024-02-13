@@ -809,7 +809,7 @@ async def getout(client, message):
     btn = [[
         InlineKeyboardButton("✨𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲✨", url="https://t.me/OceanCrewMovies")
     ]]
-    dialogs = await client.get_dialogs()
+    dialogs = [dialog async for dialog in client.iter_dialogs()]
     for dialog in dialogs:
         chat_type = dialog.chat.type
         if chat_type == "group" or chat_type == "supergroup" and dialog.chat.id != ALW_GRP:
