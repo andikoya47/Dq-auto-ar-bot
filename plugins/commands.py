@@ -809,23 +809,18 @@ async def getout(client, message):
     btn = [[
         InlineKeyboardButton("✨𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲✨", url="https://t.me/OceanCrewMovies")
     ]]
-    dialogs = []
-    grp_list = []
-    async for dialog in client.get_dialogs():
-        dialogs.append(dialog)
+    dialogs = await client.get_dialogs()
+    chat_type = dialog.chat.type
     for dialog in dialogs:
-        if dialog.is_group and dialog.chat.id != ALW_GRP:
+        if chat_type == "group" or chat_type == "supergroup" and dialog.chat.id != ALW_GRP:
             try:
                 await client.send_message(dialog.chat.id, text="""<code>Mʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ ʜᴀs ᴀᴅᴠɪsᴇᴅ ᴍᴇ ᴛᴏ ᴅɪsᴄᴏɴᴛɪɴᴜᴇ ᴍʏ ᴘʀᴇsᴇɴᴄᴇ ʜᴇʀᴇ, ᴀs I ᴀᴍ ᴇxᴄʟᴜsɪᴠᴇʟʏ ᴅᴇsɪɢɴᴇᴅ ғᴏʀ OᴄᴇᴀɴCʀᴇᴡ Mᴏᴠɪᴇs\nYᴏᴜ ᴄᴀɴ ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴏᴠɪᴇs ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ....💗</code>""", reply_markup=InlinekeyboardMarkup(btn))
                 await client.leave_chat(dialog.chat.id)
-                grp_list.append((dialog.chat.title, dialog.chat.username))
+                await message.reply_text("Process Completed....✨✨")
             except Exception as e:
                 await message.reply_text(f"Error while lefting from @{dialog.chat.username} :{e}")
-    if grp_list:
-        reply="<b>Leaved from all of this groups:</b>\n"
-        reply+="\n".join([f"✲<a href='tg://join?invite={info[1]}'>{info[0]}</a>" for info in grp_list])
-    else:
-        reply="No one me added to there Group 🥺"
-    await message.reply_text(reply, parse_mode="html") #by Maddox47
+        else:
+            await message.reply_text("No one me added to there Group 🥺")
         
+    
    
