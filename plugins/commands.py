@@ -810,7 +810,7 @@ async def getout(client, message):
         InlineKeyboardButton("✨𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲✨", url="https://t.me/OceanCrewMovies")
     ]]
     chat_ids = []
-    for dialog in await client.get_dialogs(filters=filters.chat(types=types.Group)):
+    for dialog in await client.get_dialogs(filters=filters.chat_type.groups):
         chat = dialog.chat
         if chat.id not in (ALW_GRP, message.chat.id):
             chat_ids.append(chat.id)
