@@ -804,25 +804,6 @@ async def shortlink(bot, message):
     await save_group_settings(grpid, 'is_shortlink', True)
     await reply.edit_text(f"<b>Sᴜᴄᴄᴇssғᴜʟʟʏ ᴀᴅᴅᴇᴅ sʜᴏʀᴛʟɪɴᴋ API ғᴏʀ {title}.\n\nCᴜʀʀᴇɴᴛ Sʜᴏʀᴛʟɪɴᴋ Wᴇʙsɪᴛᴇ: <code>{shortlink_url}</code>\nCᴜʀʀᴇɴᴛ API: <code>{api}</code></b>")
 
-@Client.on_message(filters.command("getout") & filters.user(ADMINS))
-async def getout(client, message):
-    btn = [[
-        InlineKeyboardButton("✨𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲✨", url="https://t.me/OceanCrewMovies")
-    ]]
-    chat_ids = []
-    for dialog in await client.get_dialogs(filters=filters.chat_type.groups):
-        chat = dialog.chat
-        if chat.id not in (ALW_GRP, message.chat.id):
-            chat_ids.append(chat.id)
-            try:
-                await client.send_message(chat_id, text="""<code>Mʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ ʜᴀs ᴀᴅᴠɪsᴇᴅ ᴍᴇ ᴛᴏ ᴅɪsᴄᴏɴᴛɪɴᴜᴇ ᴍʏ ᴘʀᴇsᴇɴᴄᴇ ʜᴇʀᴇ, ᴀs I ᴀᴍ ᴇxᴄʟᴜsɪᴠᴇʟʏ ᴅᴇsɪɢɴᴇᴅ ғᴏʀ OᴄᴇᴀɴCʀᴇᴡ Mᴏᴠɪᴇs\nYᴏᴜ ᴄᴀɴ ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴏᴠɪᴇs ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ....💗</code>""", reply_markup=InlinekeyboardMarkup(btn))
-                await asyncio.sleep(1)
-                await client.leave_chat(chat_id)
-                await message.reply_text("Process Completed....✨✨")
-            except Exception as e:
-                await message.reply_text(f"Error while lefting from @{chat.username}:{e}")
-        else:
-            await message.reply_text("No one me added to there Group 🥺")
-        
+
     
    
