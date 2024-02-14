@@ -48,13 +48,17 @@ async def give_filter(client, message):
                 settings = await get_settings(message.chat.id)
                 try:
                     if settings['auto_ffilter']:
+                        st_msg = await message.reply_sticker('CAACAgUAAxkBAAELZR1lzF4SEr5fxkjZ9J7c3rI5F4pXOgACmgADyJRkFCxl4eFc7yVqNAQ')
                         await auto_filter(client, message)
+                        await client.delete_messages(message.chat.id, st_msg.message.id)
                 except KeyError:
                     grpid = await active_connection(str(message.from_user.id))
                     await save_group_settings(grpid, 'auto_ffilter', True)
                     settings = await get_settings(message.chat.id)
                     if settings['auto_ffilter']:
+                        st_msg = await message.reply_sticker('CAACAgUAAxkBAAELZR1lzF4SEr5fxkjZ9J7c3rI5F4pXOgACmgADyJRkFCxl4eFc7yVqNAQ')
                         await auto_filter(client, message)
+                        await client.delete_messages(message.chat.id, st_msg.message.id)
     else: #a better logic to avoid repeated lines of code in auto_filter function
         search = message.text
         temp_files, temp_offset, total_results = await get_search_results(chat_id=message.chat.id, query=search.lower(), offset=0, filter=True)
