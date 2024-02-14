@@ -50,7 +50,7 @@ async def give_filter(client, message):
                     if settings['auto_ffilter']:
                         st_msg = await message.reply_sticker('CAACAgUAAxkBAAELZR1lzF4SEr5fxkjZ9J7c3rI5F4pXOgACmgADyJRkFCxl4eFc7yVqNAQ')
                         await auto_filter(client, message)
-                        await client.delete_messages(chat_id=message.chat.id, message_id=st_msg.id)
+                        await client.delete_messages(chat_id=message.chat.id, message_ids=st_msg.id)
                 except KeyError:
                     grpid = await active_connection(str(message.from_user.id))
                     await save_group_settings(grpid, 'auto_ffilter', True)
