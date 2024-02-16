@@ -10,7 +10,7 @@ Yᴏᴜ Cᴀɴ Dᴏᴡɴʟᴏᴀᴅ Mᴏᴠɪᴇs Tʜʀᴏᴜɢʜ Mᴇ . Sɪᴍ�
 📕 Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
 🗄️ DᴀᴛᴀBᴀsᴇ: <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>
 📟 Bᴏᴛ Sᴇʀᴠᴇʀ: Reɴder 
-🔧 Dᴇᴠᴇʟᴏᴩᴇʀ & Aᴅɪᴍɴꜱ : <a href='https://t.me/Maddox_kozh'>ᴍᴀᴅᴅᴏx</a> & <a href='https://t.me/Haterxv'>ʜᴀᴛᴇʀ</a> </b>"""
+🔧 Dᴇᴠᴇʟᴏᴩᴇʀ & Aᴅɪᴍɴꜱ : <a href='https://t.me/Maddox_provision'>ᴍᴀᴅᴅᴏx</a> & <a href='https://t.me/Haterxv'>ʜᴀᴛᴇʀ</a> </b>"""
     
     MANUELFILTER_TXT = """ʜᴇʟᴘ: <b>ꜰɪʟᴛᴇʀꜱ</b>
 - ꜰɪʟᴛᴇʀ ɪꜱ ᴀ ꜰᴇᴀᴛᴜʀᴇ ᴡᴇʀᴇ ᴜꜱᴇʀꜱ ᴄᴀɴ ꜱᴇᴛ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ʀᴇᴘʟɪᴇꜱ ꜰᴏʀ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴋᴇʏᴡᴏʀᴅ ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇꜱᴘᴏɴᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀ ᴋᴇʏᴡᴏʀᴅ ɪꜱ ꜰᴏᴜɴᴅ ɪɴ ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ
@@ -170,7 +170,7 @@ By @{} """
     LEAVE_TXT = """
 I'ᴍ ᴇxᴄʟᴜsɪᴠᴇʟʏ ᴅᴇsɪɢɴᴇᴅ ғᴏʀ OCEANCREW MOVIES Gʀᴏᴜᴘ ᴀɴᴅ ᴄᴀɴɴᴏᴛ ᴘᴀʀᴛɪᴄɪᴘᴀᴛᴇ ɪɴ ᴏᴛʜᴇʀ ɢʀᴏᴜᴘs. 
 Fᴏʀ Mᴏᴠɪᴇs, ᴘʟᴇᴀsᴇ ᴜsᴇ ᴛʜᴇ OCEANCREW MOVIES ɢʀᴏᴜᴘ. 
-Aᴄᴄᴇss ᴛʜᴇ Gʀᴏᴜᴘ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ✨..."""
+Aᴄᴄᴇss ᴛʜᴇ Gʀᴏᴜᴘ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.... ✨"""
 
     LEAVE_LOG = """
 <b>#Leaved</b>
