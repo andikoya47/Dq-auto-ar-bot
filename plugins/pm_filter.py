@@ -48,7 +48,7 @@ async def give_filter(client, message):
                 settings = await get_settings(message.chat.id)
                 try:
                     if settings['auto_ffilter']:
-                        st_msg = await message.reply_sticker('CAACAgUAAxkBAAELZR1lzF4SEr5fxkjZ9J7c3rI5F4pXOgACmgADyJRkFCxl4eFc7yVqNAQ')
+                        st_msg = await message.reply_text(f"<b>Searching For {message.text}...🔍</b>")
                         await auto_filter(client, message)
                         await client.delete_messages(chat_id=message.chat.id, message_ids=st_msg.id)
                 except KeyError:
@@ -56,7 +56,7 @@ async def give_filter(client, message):
                     await save_group_settings(grpid, 'auto_ffilter', True)
                     settings = await get_settings(message.chat.id)
                     if settings['auto_ffilter']:
-                        st_msg = await message.reply_sticker('CAACAgUAAxkBAAELZR1lzF4SEr5fxkjZ9J7c3rI5F4pXOgACmgADyJRkFCxl4eFc7yVqNAQ')
+                        st_msg = await message.reply_text(f"<b>Searching For {message.text}...🔍</b>")
                         await auto_filter(client, message)
                         await client.delete_messages(chat_id=message.chat.id, message_ids=st_msg.id)
     else: #a better logic to avoid repeated lines of code in auto_filter function
