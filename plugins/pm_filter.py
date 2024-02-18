@@ -36,8 +36,15 @@ logger.setLevel(logging.ERROR)
 
 BUTTONS = {}
 SPELL_CHECK = {}
-
-
+nikavade = [
+    'CAACAgUAAxkBAAELZR1lzF4SEr5fxkjZ9J7c3rI5F4pXOgACmgADyJRkFCxl4eFc7yVqNAQ',
+    'CAACAgIAAxkBAAELbeNl0cB2eqK7fVjDvqq43Mh1gI1szAACdQADS0IiEYnt2zJ2iiz9NAQ',
+    'CAACAgUAAxkBAAELbeVl0cDD_D-Riol31Nbky-6WBaEBDAACBAADwSQxMYnlHW4Ls8gQNAQ',
+    'CAACAgUAAxkBAAELbeZl0cDDlh78JC24eovpLAuNCeWnIgACUgIAAtFIeVfgHpQAAYicMEM0BA',
+    'CAACAgEAAxkBAAELbedl0cDDjlFz7RKa1VUUO5LSOZaAeAACRgMAAiqHGURoXzCXdu7QsTQE'
+]
+    
+    
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     if message.chat.id != SUPPORT_CHAT_ID:
@@ -48,7 +55,7 @@ async def give_filter(client, message):
                 settings = await get_settings(message.chat.id)
                 try:
                     if settings['auto_ffilter']:
-                        st_msg = await message.reply_text(f"<b>Searching For {message.text}...🔍</b>")
+                        st_msg = await message.reply_sticker(random.choice(nikavade))
                         await auto_filter(client, message)
                         await client.delete_messages(chat_id=message.chat.id, message_ids=st_msg.id)
                 except KeyError:
@@ -56,7 +63,7 @@ async def give_filter(client, message):
                     await save_group_settings(grpid, 'auto_ffilter', True)
                     settings = await get_settings(message.chat.id)
                     if settings['auto_ffilter']:
-                        st_msg = await message.reply_text(f"<b>Searching For {message.text}...🔍</b>")
+                        st_msg = await message.reply_sticker(random.choice(nikavade))
                         await auto_filter(client, message)
                         await client.delete_messages(chat_id=message.chat.id, message_ids=st_msg.id)
     else: #a better logic to avoid repeated lines of code in auto_filter function
