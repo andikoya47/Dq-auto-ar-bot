@@ -30,7 +30,7 @@ async def start(client, message):
                     InlineKeyboardButton("🛠️𝐀̶̶𝐃̶𝐌̶𝐈̶𝐍̶ 𝐎̶𝐍̶𝐋̶𝐘̶🛠️", callback_data="help")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
+        await message.reply(script.GRP_START.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME))
         await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
@@ -50,12 +50,15 @@ async def start(client, message):
                     InlineKeyboardButton("🛠️𝐀̶̶𝐃̶𝐌̶𝐈̶𝐍̶ 𝐎̶𝐍̶𝐋̶𝐘̶🛠️", callback_data="help")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        show = await message.reply_sticker(random.choice(showup))
+        await asyncio.sleep(2)
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+        await messages.delete(chat_id=message.chat.id, message_ids=show.id)
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
