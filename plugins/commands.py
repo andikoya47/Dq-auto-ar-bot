@@ -51,7 +51,7 @@ async def start(client, message):
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         show = await message.reply_sticker('CAACAgEAAxkBAAELdJBl1G-GNhxvTkpWuzYMh_zjxqoAAWsAAiQDAAIz1_hE4uEEw9Ju8Ho0BA')
-        await asyncio.sleep(2)
+        await asyncio.sleep(1)
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
