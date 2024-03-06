@@ -58,7 +58,7 @@ async def start(client, message):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await messages.delete(chat_id=message.chat.id, message_ids=show.id)
+        await client.delete_messages(chat_id=message.chat.id, message_ids=show.id)
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
