@@ -50,7 +50,7 @@ async def start(client, message):
                     InlineKeyboardButton("🛠️𝐀̶̶𝐃̶𝐌̶𝐈̶𝐍̶ 𝐎̶𝐍̶𝐋̶𝐘̶🛠️", callback_data="help")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        show = await message.reply_sticker(random.choice(showup))
+        show = await message.reply_sticker('CAACAgEAAxkBAAELdJBl1G-GNhxvTkpWuzYMh_zjxqoAAWsAAiQDAAIz1_hE4uEEw9Ju8Ho0BA')
         await asyncio.sleep(2)
         await message.reply_photo(
             photo=random.choice(PICS),
