@@ -1,7 +1,7 @@
 import os
 from pyrogram import Client, filters, enums
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
-from info import IMDB_TEMPLATE, SOURCE_CHANNEL, UPDATE_TEMPLATE, UPDATE_CHANNEL
+from info import IMDB_TEMPLATE, SOURCE_CHANNEL, UPDATE_TEMPLATE, UPDATE_CHANNEL, LOG_CHANNEL
 import re
 from utils import extract_user, get_file_id, get_poster, last_online
 import time
@@ -262,4 +262,4 @@ async def ott_update(client, message):
                 disable_web_page_preview=True
             )
         else:
-            await client.send_message(text=f"Could not find a matching IMDB poster for {name}")
+            await client.send_message(chat_id=LOG_CHANNEL, text=f"Could not find a matching IMDB poster for {name}")
