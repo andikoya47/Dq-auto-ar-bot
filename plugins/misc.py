@@ -1,7 +1,8 @@
 import os
 from pyrogram import Client, filters, enums
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
-from info import IMDB_TEMPLATE
+from info import IMDB_TEMPLATE, SOURCE_CHANNEL, UPDATE_TEMPLATE
+import re
 from utils import extract_user, get_file_id, get_poster, last_online
 import time
 from datetime import datetime
@@ -209,6 +210,44 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
     else:
         await quer_y.message.edit(caption, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=False)
     await quer_y.answer()
-        
 
-        
+@Client.on_message(filters.chat(SOURCE_CHANNEL) & filters.text)
+async def ott_update(client, message):
+    post_cap = message.text
+    match = re.search(r"film (.*?) Now", post_cap)
+    if match:
+        name = match.group(1).strip()
+        imdb = await get_poster(query=name, id=True)
+        if imdb:
+            caption = UPDATE_TEMPLATE.format(
+                query = imdb['title'],
+                title = imdb['title'],
+                votes = imdb['votes'],
+                aka = imdb["aka"],
+                seasons = imdb["seasons"],
+                box_office = imdb['box_office'],
+                localized_title = imdb['localized_title'],
+                kind = imdb['kind'],
+                imdb_id = imdb["imdb_id"],
+                cast = imdb["cast"],
+                runtime = imdb["runtime"],
+                countries = imdb["countries"],
+                certificates = imdb["certificates"],
+                languages = imdb["languages"],
+                director = imdb["director"],
+                writer = imdb["writer"],
+                producer = imdb["producer"],
+                composer = imdb["composer"],
+                cinematographer = imdb["cinematographer"],
+                music_team = imdb["music_team"],
+                distributors = imdb["distributors"],
+                release_date = imdb['release_date'],
+                year = imdb['year'],
+                genres = imdb['genres'],
+                poster = imdb['poster'],
+                plot = imdb['plot'],
+                rating = imdb['rating'],
+                url = imdb['url'],
+                **locals()
+            )
+        if
