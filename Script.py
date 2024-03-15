@@ -220,6 +220,16 @@ Aᴄᴄᴇss ᴛʜᴇ Gʀᴏᴜᴘ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴛʜᴇ ʙᴇʟᴏ�
 (𝑻𝒊𝒑 :<b>Click Languag Button And Choose Your Languages</b>)
 
 𝙎𝙀𝙇𝙀𝘾𝙏 𝙔𝙊𝙐𝙍 𝙁𝙄𝙇𝙀  👇"""
+    
+    IMDB_UPDATE_TEMPLATE = """
+🍿 <b><code>{title}</code></b> ({year}) 
+───────────────────────
+» Languages: {languages}
+» Genre: {genres} | {kind}
+» Ratings: <a href={url}>{rating} IMDB</a>
+» User Votings: {votes}
+» Box Office: {box_office}
+───────────────────────
 
     ALL_FILTERS = """
 <b>Hᴇʏ {}, Tʜᴇsᴇ ᴀʀᴇ ᴍʏ ᴛʜʀᴇᴇ ᴛʏᴘᴇs ᴏғ ғɪʟᴛᴇʀs.</b>"""
