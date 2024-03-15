@@ -218,6 +218,9 @@ async def ott_update(client, message):
     if match:
         name = match.group(1).strip()
         imdb = await get_poster(query=name, id=True)
+        dl = [[
+            InlineKeyboardButton("𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣", url='https://t.me/OceanCrewMovies')
+        ]]
         if imdb:
             caption = UPDATE_TEMPLATE.format(
                 query = imdb['title'],
@@ -254,7 +257,9 @@ async def ott_update(client, message):
             await client.send_photo(
                 chat_id=UPDATE_CHANNEL,
                 photo=imdb['poster'],
-                caption=caption
+                caption=caption,
+                reply_markup=InlineKeyboardMarkup(dl),
+                disable_web_page_preview=True
             )
         else:
             await client.send_message(text=f"Could not find a matching IMDB poster for {name}")
