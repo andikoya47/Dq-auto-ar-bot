@@ -250,4 +250,11 @@ async def ott_update(client, message):
                 url = imdb['url'],
                 **locals()
             )
-        if
+        if imdb.get('poster'): 
+            await client.send_photo(
+                chat_id=UPDATE_CHANNEL,
+                photo=imdb['poster'],
+                caption=caption
+            )
+        else:
+            await client.send_message(text=f"Could not find a matching IMDB poster for {name}")
