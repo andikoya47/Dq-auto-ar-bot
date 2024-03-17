@@ -293,7 +293,6 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
     button = [[
         InlineKeyboardButton("𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣", url='https://t.me/OceanCrewMovies')
     ]]
-   message = quer_y.message.reply_to_message or quer_y.message
     if imdb:
         caption = UPDATE_TEMPLATE.format(
             query = imdb['title'],
