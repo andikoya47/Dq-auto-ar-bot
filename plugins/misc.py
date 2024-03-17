@@ -271,7 +271,7 @@ async def send_poster(client, message):
         k = await message.reply('njaan nokate boss...')
         r, title = message.text.split(None, 1)
         poster = await get_poster(title, bulk=True)
-        if not movies:
+        if not poster:
             return await message.reply("kunna spelling nok")
         btn = [
             [
@@ -284,7 +284,7 @@ async def send_poster(client, message):
         ]
         await k.edit('ithil eatha..', reply_markup=InlineKeyboardMarkup(btn))
     else:
-        await message.reply('ingane alla example: /unaru_dhamu kaduva')
+        await message.reply('ingane alla da \nexample: /unaru_dhamu kaduva')
 
 @Client.on_callback_query(filters.regex('^post'))
 async def imdb_callback(bot: Client, quer_y: CallbackQuery):
@@ -330,7 +330,7 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
     if imdb.get('poster'):
         try:
             await bot.send_message(chat_id=UPDATE_CHANNEL, photo=imdb['poster'], caption=caption, reply_markup=InlineKeyboardMarkup(button))
-            await quer_y.message.reply_text("chanelil il ayachu...")
+            await quer_y.message.reply_text("chanelil il ayachittund...")
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             await bot.send_message(chat_id=UPDATE_CHANNEL, text=caption, reply_markup=InlineKeyboardMarkup(button))
         except Exception as e:
