@@ -280,7 +280,7 @@ async def send_poster(client, message):
                     callback_data=f"post#{movie.movieID}",
                 )
             ]
-            for movie in movies
+            for movie in poster
         ]
         await k.edit('ithil eatha..', reply_markup=InlineKeyboardMarkup(btn))
     else:
