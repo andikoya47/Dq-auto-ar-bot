@@ -329,10 +329,10 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
         caption = "No Results"
     if imdb.get('poster'):
         try:
-            await bot.send_message(chat_id=UPDATE_CHANNEL, photo=imdb['poster'], caption=caption, reply_markup=InlineKeyboardMarkup(button)
+            await bot.send_message(chat_id=UPDATE_CHANNEL, photo=imdb['poster'], caption=caption, reply_markup=InlineKeyboardMarkup(button))
             await quer_y.message.reply_text("chanelil il ayachu...")
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
-            await bot.send_message(chat_id=UPDATE_CHANNEL, text=caption, reply_markup=InlineKeyboardMarkup(button)
+            await bot.send_message(chat_id=UPDATE_CHANNEL, text=caption, reply_markup=InlineKeyboardMarkup(button))
         except Exception as e:
             logger.exception(e)
             await quer_y.message.reply(caption, disable_web_page_preview=False)
