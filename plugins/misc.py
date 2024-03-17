@@ -1,7 +1,7 @@
 import os
 from pyrogram import Client, filters, enums
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
-from info import IMDB_TEMPLATE, SOURCE_CHANNEL, UPDATE_TEMPLATE, UPDATE_CHANNEL, LOG_CHANNEL
+from info import IMDB_TEMPLATE, SOURCE_CHANNEL, UPDATE_TEMPLATE, UPDATE_CHANNEL, LOG_CHANNEL, ADMINS
 import re
 from utils import extract_user, get_file_id, get_poster, last_online
 import time
@@ -55,7 +55,7 @@ async def showid(client, message):
             quote=True
         )
 
-@Client.on_message(filters.command(["info"]))
+@Client.on_message(filters.command(["info"]) & filters.user(ADMINS))
 async def who_is(client, message):
     # https://github.com/SpEcHiDe/PyroGramBot/blob/master/pyrobot/plugins/admemes/whois.py#L19
     status_message = await message.reply_text(
@@ -128,7 +128,7 @@ async def who_is(client, message):
         )
     await status_message.delete()
 
-@Client.on_message(filters.command(["imdb", 'search']))
+@Client.on_message(filters.command(["imdb", 'search']) & filters.user(ADMINS))
 async def imdb_search(client, message):
     if ' ' in message.text:
         k = await message.reply('Searching ImDB')
@@ -217,6 +217,7 @@ async def ott_update(client, message):
     match = re.search(r"film (.*?) Now", post_cap)
     if match:
         name = match.group(1).strip()
+        get = await get_poster(title, bulk=True)
         imdb = await get_poster(query=name, id=True)
         dl = [[
             InlineKeyboardButton("𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣", url='https://t.me/OceanCrewMovies')
@@ -263,3 +264,80 @@ async def ott_update(client, message):
             )
         else:
             await client.send_message(chat_id=LOG_CHANNEL, text=f"Could not find a matching IMDB poster for {name}")
+
+@Client.on_message(filters.command(["unaru_dhamu"]) & filters.user(ADMINS))
+async def send_poster(client, message):
+    if ' ' in message.text:
+        k = await message.reply('njaan nokate boss...')
+        r, title = message.text.split(None, 1)
+        poster = await get_poster(title, bulk=True)
+        if not movies:
+            return await message.reply("kunna spelling nok")
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"{movie.get('title')} - {movie.get('year')}",
+                    callback_data=f"post#{movie.movieID}",
+                )
+            ]
+            for movie in movies
+        ]
+        await k.edit('ithil eatha..', reply_markup=InlineKeyboardMarkup(btn))
+    else:
+        await message.reply('ingane alla example: /unaru_dhamu kaduva')
+
+@Client.on_callback_query(filters.regex('^post'))
+async def imdb_callback(bot: Client, quer_y: CallbackQuery):
+    i, movie = quer_y.data.split('#')
+    template = await get_poster(query=movie, id=True)
+    button = [[
+        InlineKeyboardButton("𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣", url='https://t.me/OceanCrewMovies')
+    ]]
+   message = quer_y.message.reply_to_message or quer_y.message
+    if imdb:
+        caption = UPDATE_TEMPLATE.format(
+            query = imdb['title'],
+            title = imdb['title'],
+            votes = imdb['votes'],
+            aka = imdb["aka"],
+            seasons = imdb["seasons"],
+            box_office = imdb['box_office'],
+            localized_title = imdb['localized_title'],
+            kind = imdb['kind'],
+            imdb_id = imdb["imdb_id"],
+            cast = imdb["cast"],
+            runtime = imdb["runtime"],
+            countries = imdb["countries"],
+            certificates = imdb["certificates"],
+            languages = imdb["languages"],
+            director = imdb["director"],
+            writer = imdb["writer"],
+            producer = imdb["producer"],
+            composer = imdb["composer"],
+            cinematographer = imdb["cinematographer"],
+            music_team = imdb["music_team"],
+            distributors = imdb["distributors"],
+            release_date = imdb['release_date'],
+            year = imdb['year'],
+            genres = imdb['genres'],
+            poster = imdb['poster'],
+            plot = imdb['plot'],
+            rating = imdb['rating'],
+            url = imdb['url'],
+            **locals()
+        )
+    else:
+        caption = "No Results"
+    if imdb.get('poster'):
+        try:
+            await bot.send_message(chat_id=UPDATE_CHANNEL, photo=imdb['poster'], caption=caption, reply_markup=InlineKeyboardMarkup(button)
+            await quer_y.message.reply_text("chanelil il ayachu...")
+        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
+            await bot.send_message(chat_id=UPDATE_CHANNEL, text=caption, reply_markup=InlineKeyboardMarkup(button)
+        except Exception as e:
+            logger.exception(e)
+            await quer_y.message.reply(caption, disable_web_page_preview=False)
+        await quer_y.message.delete()
+    else:
+        await quer_y.message.edit(caption, disable_web_page_preview=False)
+    await quer_y.answer()
