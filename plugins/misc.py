@@ -265,7 +265,7 @@ async def ott_update(client, message):
         else:
             await client.send_message(chat_id=LOG_CHANNEL, text=f"Could not find a matching IMDB poster for {name}")
 
-@Client.on_message(filters.command(["unaru_dhamu"]) & filters.user(ADMINS))
+@Client.on_message(filters.command(['unaru_dhamu', 'get']) & filters.user(ADMINS))
 async def send_poster(client, message):
     if ' ' in message.text:
         k = await message.reply('njaan nokate boss...')
@@ -293,7 +293,7 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
     button = [[
         InlineKeyboardButton("𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣", url='https://t.me/OceanCrewMovies')
     ]]
-    if imdb:
+    if poster:
         caption = UPDATE_TEMPLATE.format(
             query = imdb['title'],
             title = imdb['title'],
@@ -327,7 +327,7 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
         )
     else:
         caption = "No Results"
-    if imdb.get('poster'):
+    if poster.get('poster'):
         try:
             await bot.send_message(chat_id=UPDATE_CHANNEL, photo=imdb['poster'], caption=caption, reply_markup=InlineKeyboardMarkup(button))
             await quer_y.message.reply_text("chanelil il ayachittund...")
