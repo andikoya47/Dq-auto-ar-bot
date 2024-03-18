@@ -268,11 +268,11 @@ async def ott_update(client, message):
 @Client.on_message(filters.command(['unaru_dhamu', 'get']) & filters.user(ADMINS))
 async def send_poster(client, message):
     if ' ' in message.text:
-        k = await message.reply('njaan nokate boss...')
+        k = await message.reply('nokate wait...')
         r, title = message.text.split(None, 1)
         poster = await get_poster(title, bulk=True)
         if not poster:
-            return await message.reply("kunna spelling nok")
+            return await message.reply("kunna spelling nok . correct anenkil i movie k imdb yil poster ndakula")
         btn = [
             [
                 InlineKeyboardButton(
@@ -289,11 +289,11 @@ async def send_poster(client, message):
 @Client.on_callback_query(filters.regex('^post'))
 async def imdb_callback(bot: Client, quer_y: CallbackQuery):
     i, movie = quer_y.data.split('#')
-    template = await get_poster(query=movie, id=True)
+    imdb = await get_poster(query=movie, id=True)
     button = [[
         InlineKeyboardButton("𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣", url='https://t.me/OceanCrewMovies')
     ]]
-    if poster:
+    if imdb:
         caption = UPDATE_TEMPLATE.format(
             query = imdb['title'],
             title = imdb['title'],
@@ -327,7 +327,7 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
         )
     else:
         caption = "No Results"
-    if poster.get('poster'):
+    if imdb.get('poster'):
         try:
             await bot.send_message(chat_id=UPDATE_CHANNEL, photo=imdb['poster'], caption=caption, reply_markup=InlineKeyboardMarkup(button))
             await quer_y.message.reply_text("chanelil il ayachittund...")
