@@ -78,7 +78,7 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 UPDATE_CHANNEL = int(environ.get('UPDATE_CHANNEL', ''))
-SOURCE_CHANNEL = int(environ.get('SOURCE_CHANNEL', ''))
+#SOURCE_CHANNEL = int(environ.get('SOURCE_CHANNEL', ''))
 UPDATE_TEMPLATE = environ.get("UPDATE_TEMPLATE", f"{script.IMDB_UPDATE_TEMPLATE}")
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
